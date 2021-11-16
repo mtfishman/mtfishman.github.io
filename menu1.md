@@ -15,16 +15,21 @@ title = "Matthew Fishman"
 * I am interested in learning more about applying other high performance computing (HPC) techniques like GPUs and distributed computing to improve tensor network software.
 * Check out my repositories and reach out with any questions you have or if you are interested in contributing to any libraries I develop!
 
-### Education
-
-* I received my Ph.D. from Caltech in the Spring of 2018. My thesis was on the development of tensor network algorithms.
-
 ### Online Presence
 
 * [Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity.
 * [ITensor Support](https://itensor.org/support) - I answer questions about ITensor on the support forum.
 * [Julia Discourse](https://discourse.julialang.org/u/mtfishman/summary) - I occasionally ask and answer questions on Julia discourse.
 * [CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
+
+### Recorded Talks
+
+* [Intelligent Tensors in Julia | JuliaCon 2019](https://www.youtube.com/watch?v=A2ypJkA26co)
+* [What's new in ITensors.jl | JuliaCon 2021](https://www.youtube.com/watch?v=SMJ0TY_RSo4)
+
+### Education
+
+* I received my Ph.D. from Caltech in the Spring of 2018. My thesis was on the development of tensor network algorithms.
 
 ### Hobbies
 
