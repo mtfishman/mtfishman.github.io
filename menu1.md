@@ -24,6 +24,7 @@ title = "Matthew Fishman"
 * [Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity.
 * [ITensor Support](https://itensor.org/support) - I answer questions about ITensor on the support forum.
 * [Julia Discourse](https://discourse.julialang.org/u/mtfishman/summary) - I occasionally ask and answer questions on Julia discourse.
+* [CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
 
 ### Hobbies
 
