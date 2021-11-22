@@ -17,10 +17,12 @@ title = "Matthew Fishman"
 
 ### Online Presence
 
+* [Email](mailto:mfishman@flatironinstitute.org)
 * [Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity.
 * [ITensor Support](https://itensor.org/support) - I answer questions about ITensor on the support forum.
 * [Julia Discourse](https://discourse.julialang.org/u/mtfishman/summary) - I occasionally ask and answer questions on Julia discourse.
 * [CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
+* [Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en)
 
 ### Recorded Talks
 
@@ -29,7 +31,8 @@ title = "Matthew Fishman"
 
 ### Education
 
-* I received my Ph.D. from Caltech in the Spring of 2018. My thesis was on the development of tensor network algorithms.
+* PhD in Physics, Caltech, 2018. My thesis was on the development of tensor network algorithms.
+* BS in Engineering Physics, Cornell University, 2012.
 
 ### Hobbies
 
