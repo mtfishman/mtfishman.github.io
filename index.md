@@ -12,7 +12,7 @@ Welcome! I'm Matt Fishman, [Associate Data Scientist at the Center for Computati
 
 [~~~<i class="fas fa-envelope" title="Email"></i>~~~ Email](mailto:mfishman@flatironinstitute.org)
 
-[~~~<i class="far fa-github" title="Github"></i>~~~ Github](https://github.com/mtfishman)
+[~~~<i class="fab fa-github" title="Github"></i>~~~ Github](https://github.com/mtfishman)
 
 [~~~<i class="fas fa-building" title="CCQ Profile"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
 

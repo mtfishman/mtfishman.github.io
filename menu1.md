@@ -28,7 +28,7 @@ title = "Matthew Fishman"
 
 [~~~<i class="fas fa-envelope" title="Email"></i>~~~ Email](mailto:mfishman@flatironinstitute.org) - For general questions, feel free to email me directly. I receive a lot of email, if I don't respond it may have gotten buried in my inbox so please email me again to remind me to respond.
 
-[~~~<i class="far fa-github" title="Github"></i>~~~ Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity. If there are problems or missing features on coding projects I work on, please raise an issue on the Github repository of the corresponding [project](/menu2) or make a pull request if you have a fix. If I don't respond, feel free to bug me with comments on Github or by email.
+[~~~<i class="fab fa-github" title="Github"></i>~~~ Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity. If there are problems or missing features on coding projects I work on, please raise an issue on the Github repository of the corresponding [project](/menu2) or make a pull request if you have a fix. If I don't respond, feel free to bug me with comments on Github or by email.
 
 [~~~<i class="fas fa-draw-polygon" title="ITensor Support"></i>~~~ ITensor Support](https://itensor.org/support) - I answer questions about ITensor on our support forum. This is a good place to ask ITensor-specific questions, like how to use ITensor for your particular problem.
 

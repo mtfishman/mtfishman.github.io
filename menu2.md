@@ -16,7 +16,7 @@ I am the lead developer of [ITensors.jl](https://github.com/ITensor/ITensors.jl)
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl)
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2020}
 
@@ -24,19 +24,19 @@ I am the lead developer of [ITensors.jl](https://github.com/ITensor/ITensors.jl)
 
 [ITensorGLMakie.jl](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGLMakie) is a package I wrote for easily making interactive visualizations of tensor networks written with ITensors.jl, based on [GraphMakie.jl](https://github.com/JuliaPlots/GraphMakie.jl) and [Makie.jl](https://github.com/JuliaPlots/Makie.jl).
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGLMakie)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGLMakie)
 
 ### ITensorUnicodePlots.jl
 
 [ITensorUnicodePlots.jl](https://github.com/ITensor/ITensors.jl/tree/main/ITensorUnicodePlots) is an alternative backend for visualizing networks of ITensors as text output, based on [UnicodePlots.jl](https://github.com/JuliaPlots/UnicodePlots.jl).
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorUnicodePlots)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorUnicodePlots)
 
 ### ITensorGaussianMPS.jl
 
 [ITensorGaussianMPS.jl](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGaussianMPS) is a Julia package I wrote for transforming free fermion states into tensor network states, based on an algorithm I developed during my Ph.D. with [Steven White](https://faculty.sites.uci.edu/dmrg/).
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGaussianMPS)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGaussianMPS)
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2015}
 
@@ -44,7 +44,7 @@ I am the lead developer of [ITensors.jl](https://github.com/ITensor/ITensors.jl)
 
 [ITensorInfiniteMPS.jl](https://github.com/ITensor/ITensorInfiniteMPS.jl) is a Julia package I wrote for extending the functionality of ITensors.jl to infinite MPS.
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensorInfiniteMPS.jl)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensorInfiniteMPS.jl)
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{stauber2017}
 
@@ -52,13 +52,13 @@ I am the lead developer of [ITensors.jl](https://github.com/ITensor/ITensors.jl)
 
 [ITensorGPU.jl](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGPU) is a a GPU backend for ITensors.jl primarily written by [Katie Hyatt](https://github.com/kshyatt) while she was a postdoc at the CCQ.
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGPU)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGPU)
 
 ### ITensorNetworkAD.jl
 
 [ITensorNetworkAD.jl](https://github.com/ITensor/ITensorNetworkAD.jl) is an experimental tensor network automatic differentiation (AD) library based on [ITensors.jl](https://github.com/ITensor/ITensors.jl), started by [Linjian Ma](https://linjianma.github.io) while he was a summer intern at the CCQ. It makes use of [AutoHOOT](https://github.com/LinjianMa/AutoHOOT), a Python library for symbolic derivatives and simplifications of tensor networks.
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensorNetworkAD.jl)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensorNetworkAD.jl)
 
 ### Other extensions to ITensors.jl
 
@@ -70,7 +70,7 @@ Many packages are in development that extend the functionality of ITensors.jl, s
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ pastaq.org](https://pastaq.org)
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/GTorlai/PastaQ.jl)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/GTorlai/PastaQ.jl)
 
 ## ITensor (C++)
 
@@ -78,7 +78,7 @@ Many packages are in development that extend the functionality of ITensors.jl, s
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
 
-[~~~<i class="far fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensor)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensor)
 
 ## Miscellaneous Julia Packages
 
