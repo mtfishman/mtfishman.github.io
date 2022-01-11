@@ -4,7 +4,7 @@ Source code for [mtfishman.github.io](https://mtfishman.github.io), the personal
 The site is built with [Franklin.jl](https://github.com/tlienart/Franklin.jl), based on the [basic Franklin template](https://tlienart.github.io/FranklinTemplates.jl).
 
 To build and view the website locally, first [install Julia](https://julialang.org/downloads).
-Then clone the repository locally, and in the base directly run:
+Then clone the repository locally, and in the base directory run:
 ```julia
 $ julia
 
