@@ -10,9 +10,41 @@ title = "Projects"
 
 ## ITensors.jl
 
-I am the lead developer of [ITensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl), a full port of the [C++ ITensor library ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensor) to the Julia language. It is a library co-developed with [Miles Stoudenmire ~~~<i class="fas fa-external-link-alt"></i>~~~](http://itensor.org/miles) for easily developing and running high performance tensor network calculations.
+I am the lead developer of
+[ITensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl)
+, a full port of the
+[C++ ITensor library ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensor)
+to the Julia language.
+It is a library co-develop with
+[Miles Stoudenmire ~~~<i class="fas fa-external-link-alt"></i>~~~](http://itensor.org/miles)
+for easily developing and running high performance tensor network
+calculations, with applications to quantum physics, quantum computing
+chemistry, and data science/machine learning.
 
-~~~<i class="fas fa-newspaper"></i>~~~  __What's New:__ Derivatives of basic tensor network operations using automatic differentiation are now supported. Reverse mode automatic differentiation (AD) primitives are defined using [ChainRules.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaDiff/ChainRules.jl), and derivatives can be computed with AD libraries like [Zygote.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/FluxML/Zygote.jl).
+~~~<i class="fas fa-newspaper"></i>~~~
+__What's New:__
+Derivatives of basic tensor network operations using automatic
+differentiation are now supported.
+Reverse mode automatic differentiation (AD) primitives are defined using
+[ChainRulesCore.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaDiff/ChainRulesCore.jl)
+, and derivatives can be computed with AD libraries like
+[Zygote.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/FluxML/Zygote.jl)
+(and eventually next generation AD libraries like
+[Diffractor.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaDiff/Diffractor.jl)
+).
+
+~~~<i class="fas fa-tools"></i>~~~
+Our goal is to make the entire `ITensors.jl` package differentiable,
+but currently we only have basic operations like tensor contraction,
+addition, and index manipulation.
+More reverse mode automatic differentation rules
+(`ChainRulesCore.jl` `rrule`s) and/or modifications of internal `ITensors.jl`
+functions to avoid non-differentiable code patterns like mutation are
+needed to make this happen.
+The following functionality is high priority:
+* Differentiation rules for tensor decompositions like SVD, QR, eigendecomposition, etc. This will allow us to more directly differentiate through approximate tensor network algorithms like CTMRG for automatic differentiation-based gradient optimization of infinite projected entangled pair states (PEPS).
+* Differentation rules for matrix product state (MPS) and matrix product operator (MPO) algebra operations, like contraction, addition, construction, etc.
+* Differentation support for the new [Ops system ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/src/Ops), which will allow differentiating through the construction of operators and Trotter decompositions. This will make for much more robust support for variational quantum circuit applications like quantum control (though we already have initial support for that in [PastaQ.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/GTorlai/PastaQ.jl)).
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
 
@@ -74,7 +106,7 @@ Many packages are in development that extend the functionality of ITensors.jl, s
 
 ## ITensor (C++)
 
-[ITensor ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensor) is a C++ library for developing and performing tensor network calculations. I was the lead developer of [C++ ITensor Version 3 ~~~<i class="fas fa-external-link-alt"></i>~~~](https://itensor.org/news.html), the latest major release of the library which had many improvements to the interface and performance of block sparse calculations, including the introduction of blocks sparse multithreading with OpenMP.
+[ITensor ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensor) is a C++ library for developing and performing tensor network calculations. I was the lead developer of [C++ ITensor Version 3 ~~~<i class="fas fa-external-link-alt"></i>~~~](https://itensor.org/news.html), the latest major release of the library which had many improvements to the interface and performance of block sparse calculations, including the introduction of block sparse multithreading with OpenMP.
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
 
@@ -85,6 +117,25 @@ Many packages are in development that extend the functionality of ITensors.jl, s
 ### Observers.jl
 
 I co-developed [Observers.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/GTorlai/Observers.jl) with [Giacomo Torlai ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/GTorlai). It is a package for conveniently specifying a set of measurements you want to make inside of an iterative method.
+It is currently being used in
+[PastaQ.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/GTorlai/PastaQ.jl)
+inside iterative optimization methods like quantum state and process
+tomography as well as quantum circuit evolution, and we plan to make use
+of it in [ITensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl).
+
+~~~<i class="fas fa-tools"></i>~~~
+__Using `Observers.jl` in `ITensors.jl`:__
+We are interested in using
+[Observers.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/GTorlai/Observers.jl)
+inside iterative methods in
+[ITensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl)
+like the density matrix renormalization group (DMRG) eigensolver as well
+as our circuit simulation functionality (`apply`).
+Please [reach out](/about/#online_presence) to me if you are interested
+in helping out with this! It would be a good project for a new user
+trying to learn about DMRG, Julia, and ITensors.jl.
+
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/GTorlai/Observers.jl)
 
 ### SerializedElementArrays.jl
 

@@ -6,7 +6,18 @@ title = "Matthew Fishman"
 
 # Introduction
 
-Welcome! I'm Matt Fishman, [Associate Data Scientist at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman) at the Flatiron Institute in New York. I'm lead developer of [ITensor](https://github.com/ITensor), a software library for easily running and developing efficient tensor network calculations.
+Welcome! I'm Matt Fishman,
+[Associate Data Scientist at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman)
+at the Flatiron Institute in New York.
+I'm lead developer of
+[ITensor](https://github.com/ITensor)
+, a software library for easily developing and running efficient tensor
+network calculations.
+
+I am passionate about developing tensor network algorithms with
+applications to quantum physics, quantum computing, chemistry, and data
+science, and providing high performance implementations of those
+algorithms in accessible software libraries with simple user interfaces.
 
 ## Online Presence
 
