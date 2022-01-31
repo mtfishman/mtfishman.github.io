@@ -20,7 +20,7 @@ and Julia.
 
 The primary development of ITensor is happening in the Julia version of the
 project now, and most new features are being added there.
-We ~~highly~~ recommend that if you are starting a new project or
+We _highly_ recommend that if you are starting a new project or
 contributing a new feature, you consider using the Julia version.
 
 If you are unfamiliar with the

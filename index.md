@@ -14,10 +14,15 @@ I'm lead developer of
 , a software library for easily developing and running efficient tensor
 network calculations.
 
-I am passionate about developing tensor network algorithms with
-applications to quantum physics, quantum computing, chemistry, and data
-science, and providing high performance implementations of those
+I am passionate about developing tensor network algorithms
+(algorithms for low rank approximations of very high order tensors)
+with applications to quantum physics, quantum computing,
+chemistry, and data science, and providing high performance implementations of those
 algorithms in accessible software libraries with simple user interfaces.
+
+I'm also a big fan of the
+[Julia programming language ~~~<i class="fas fa-external-link-alt"></i>~~~](https://julialang.org/)
+!
 
 ## Online Presence
 

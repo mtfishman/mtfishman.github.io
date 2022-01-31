@@ -21,8 +21,17 @@ for easily developing and running high performance tensor network
 calculations, with applications to quantum physics, quantum computing
 chemistry, and data science/machine learning.
 
+[~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
+
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl)
+
+~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2020}
+
+ITensors.jl news
+---
+
 ~~~<i class="fas fa-newspaper"></i>~~~
-__What's New:__
+__Automatic differentiation:__
 Derivatives of basic tensor network operations using automatic
 differentiation are now supported.
 Reverse mode automatic differentiation (AD) primitives are defined using
@@ -33,7 +42,34 @@ Reverse mode automatic differentiation (AD) primitives are defined using
 [Diffractor.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaDiff/Diffractor.jl)
 ).
 
+~~~<i class="fas fa-newspaper"></i>~~~
+__Lazy Operator Algebra (Ops) system:__
+Within ITensors.jl, we now have support for a general lazy
+operator algebra system called
+[Ops  ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/src/Ops)
+.
+This system can be used to represent arbitrary sums, products, and other
+algebraic manipulations of quantum operators (or more generally linear transformations
+in tensor product spaces).
+This can be used to represent local Hamiltonians and quantum circuits,
+as well as useful algebraic operations like expanding product of sums
+of operators and representing Trotter-Suzuki decompositions to transform
+exponentials of sums of operators into products of exponentials of operators.
+Additionally, operator representations can then be converted into explicit
+tensor representations for use in tensor network algorithms or to perform
+diagonalizations.
+
 ~~~<i class="fas fa-tools"></i>~~~
+The Ops systems needs testing, documentation, and automatic differentation
+support.
+Please [reach out](/about/#online_presence) if you are interested in helping
+out!
+
+ITensors.jl wish list
+---
+
+~~~<i class="fas fa-tools"></i>~~~
+__Automatic differentiation:__
 Our goal is to make the entire `ITensors.jl` package differentiable,
 but currently we only have basic operations like tensor contraction,
 addition, and index manipulation.
@@ -46,17 +82,115 @@ The following functionality is high priority:
 * Differentation rules for matrix product state (MPS) and matrix product operator (MPO) algebra operations, like contraction, addition, construction, etc.
 * Differentation support for the new [Ops system ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/src/Ops), which will allow differentiating through the construction of operators and Trotter decompositions. This will make for much more robust support for variational quantum circuit applications like quantum control (though we already have initial support for that in [PastaQ.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/GTorlai/PastaQ.jl)).
 
-[~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
+~~~<i class="fas fa-tools"></i>~~~
+__More block sparse multithreading:__ 
+We currently support block sparse multithreaded tensor contractions.
+We would like to add multithreading support to other block sparse
+operations, such as addition, permutation, and decomposition.
+Please [reach out](/about/#online_presence) if you are interested
+in contributing code for that!
 
-[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl)
+~~~<i class="fas fa-tools"></i>~~~
+__More block sparse factorizations:__ 
+We currently support block sparse multithreaded tensor contractions.
+We would like to add multithreading support to other block sparse
+operations, such as addition, permutation, and decomposition.
+Please [reach out](/about/#online_presence) if you are interested
+in contributing code for that!
 
-~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2020}
+~~~<i class="fas fa-tools"></i>~~~
+__ITensor slicing:__ 
+We have good support for slicing dense tensors at the level of
+[NDTensors.Tensor](/projects/#ndtensorsjl), as well as slicing
+a single block of a block sparse `NDTensors.Tensor`.
+However, it would be helpful to have high level support for
+slicing at the level of ITensors, which requires having an interface
+for slicing Index objects, which could be represented by objects like
+`i => 2:3` of type `Pair{Index{Int64},UnitRange{Int64}}`.
+Additionally, it would be helpful to have more robust support for more
+general slices of block sparse tensors, including slices across
+multiple blocks and within blocks.
+
+---
+
+### NDTensors.jl
+
+[NDTensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/NDTensors)
+is the more traditional tensor algebra package underlying `ITensors.jl`.
+It defines an n-dimensional tensor `Tensor` that can have a variety of
+storage data types for various sparse and constrained tensors, such
+as dense, block sparse, and diagonal, with more planned such as tensors
+with isometric/unitary constraints.
+It implements high performance operations between mixtures of different
+tensor types such as addition, permutation, matrix factorization,
+and contraction.
+Additionally, it supports block sparse multithreaded contraction.
+
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/NDTensors)
+
+NDTensors.jl wish list
+---
+
+~~~<i class="fas fa-tools"></i>~~~
+__Tensors with isometric/unitary constraints:__ 
+A special tensor storage type representing a tensor with isometric/unitary
+constraints would be useful in a variety of applications, such as isometrically
+constrained gradient optimization, automated simplification of tensor network
+contractions involving contractions of isometric tensors, etc.
+Please [reach out](/about/#online_presence) if you are interested in helping
+us implement this feature.
+
+~~~<i class="fas fa-tools"></i>~~~
+__Lazy complex conjugation:__ 
+It would be helpful for improving performance and memory usage to add
+support for lazy complex conjugation.
+For example, tensor contractions involving complex conjugation could be
+mapped directly to matrix multiplication calls to BLAS without allocating
+temporary complex conjugated tensors.
+
+---
+
+### ITensorVisualizationBase.jl
+
+[ITensorVisualizationBase.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/ITensorVisualizationBase)
+is an interface package for defining common functionality for different
+visualization backends for ITensors.jl.
+Currently, the main concrete backends are
+[ITensorGLMakie.jl](/projects/ITensorGLMakie.jl) and
+[ITensorUnicodePlots.jl](/projects/ITensorUnicodePlots.jl).
+You should load one of those to visualization tensor networks of ITensors
+(either as interactive plots or plots printing to the command line with
+unicode).
+
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorVisualizationBase)
+
+---
 
 ### ITensorGLMakie.jl
 
 [ITensorGLMakie.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGLMakie) is a package I wrote for easily making interactive visualizations of tensor networks written with ITensors.jl, based on [GraphMakie.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaPlots/GraphMakie.jl) and [Makie.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaPlots/Makie.jl).
+It supports clicking and dragging nodes/tensors of the tensor network.
 
 [~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGLMakie)
+
+---
+
+~~~<i class="fas fa-tools"></i>~~~
+__More interactive customization:__ 
+Currently, `ITensorGLMakie.jl` only support simple interactivity, such as clicking
+and dragging the nodes/tensors of the tensor network diagram.
+We would like to have more interactivity, such as interactively selecting the
+color, shape, and labels of the nodes/tensors.
+
+~~~<i class="fas fa-tools"></i>~~~
+__Multigraph visualization:__ 
+`ITensorGLMakie.jl` currently visualizes tensors with multiple shared indices
+with a single edge and a label with information about the multiple edges.
+It would be helpful to directly visualize the multiple edges/indices.
+`GraphMakie.jl`, the package we use as a backend for `ITensorGLMakie`,
+implicitly
+[supports visualizing multigraphs](https://github.com/JuliaPlots/GraphMakie.jl/issues/52)
+, so support for this should be straightforward to add.
 
 ### ITensorUnicodePlots.jl
 
