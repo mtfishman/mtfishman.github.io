@@ -27,7 +27,7 @@ I'm also a big fan of the
 ## ~~~<i class="fas fa-newspaper"></i>~~~ News
 
 - There is a new tutorial and presentation on gate evolution and optimization with ITensor and PastaQ that you can find [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTutorials.jl/).
-- We now have an initial implementation of TDVP based on the Julia version of ITensor which can be found [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTDVP.jl/).
+- We now have an initial implementation of 1-site and 2-site TDVP based on the Julia version of ITensor which can be found [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTDVP.jl/).
 
 ## Online Presence
 
