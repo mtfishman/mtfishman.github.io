@@ -24,6 +24,11 @@ I'm also a big fan of the
 [Julia programming language ~~~<i class="fas fa-external-link-alt"></i>~~~](https://julialang.org/)
 !
 
+## ~~~<i class="fas fa-newspaper"></i>~~~ News
+
+- There is a new tutorial and presentation on gate evolution and optimization with ITensor and PastaQ that you can find [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTutorials.jl/).
+- We now have an initial implementation of TDVP based on the Julia version of ITensor which can be found [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTDVP.jl/).
+
 ## Online Presence
 
 [~~~<i class="fas fa-envelope" title="Email"></i>~~~ Email](mailto:mfishman@flatironinstitute.org)
