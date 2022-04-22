@@ -11,5 +11,10 @@ $ julia
 julia> using Franklin
 
 julia> serve()
-[...]
+  Activating project at `~/software/mtfishman.github.io`
+→ Initial full pass...
+→ Starting the server...
+✓ LiveServer listening on http://localhost:8000/ ...
+  (use CTRL+C to shut down)
 ```
+Then open your browser and navigate to the URL [localhost:8000](http://localhost:8000/).

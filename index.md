@@ -10,8 +10,8 @@ Welcome! I'm Matt Fishman,
 [Associate Data Scientist at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman)
 at the Flatiron Institute in New York.
 I'm lead developer of
-[ITensor](https://github.com/ITensor)
-, a software library for easily developing and running efficient tensor
+[ITensor](https://itensor.org) (co-developed with [Miles Stoudenmire](https://itensor.org/miles)),
+a software library for easily developing and running efficient tensor
 network calculations.
 
 I am passionate about developing tensor network algorithms
@@ -31,15 +31,15 @@ I'm also a big fan of the
 
 ## Online Presence
 
-[~~~<i class="fas fa-envelope" title="Email"></i>~~~ Email](mailto:mfishman@flatironinstitute.org)
+[~~~<i class="fas fa-envelope"></i>~~~ Email](mailto:mfishman@flatironinstitute.org)
 
-[~~~<i class="fab fa-github" title="Github"></i>~~~ Github](https://github.com/mtfishman)
+[~~~<i class="fab fa-github"></i>~~~ Github](https://github.com/mtfishman)
 
-[~~~<i class="fas fa-building" title="CCQ Profile"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
+[~~~<i class="fas fa-building"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
 
-[~~~<i class="ai ai-google-scholar" title="Google Scholar"></i>~~~ Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en)
+[~~~<i class="ai ai-google-scholar"></i>~~~ Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en)
 
-[~~~<i class="fas fa-draw-polygon" title="ITensor Support"></i>~~~ ITensor Support](https://itensor.org/support)
+[~~~<i class="fab fa-discourse"></i>~~~ ITensor Discussion Forum](https://itensor.discourse.group)
 
-[~~~<i class="fas fa-code" title="Julia Discourse"></i>~~~ Julia Discourse](https://discourse.julialang.org/u/mtfishman/summary)
+[~~~<i class="fab fa-discourse"></i>~~~ Julia Disussion Forum](https://discourse.julialang.org/u/mtfishman/summary)
 
