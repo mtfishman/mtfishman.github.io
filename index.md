@@ -37,9 +37,14 @@ I'm also a big fan of the
 
 [~~~<i class="fas fa-building"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
 
-[~~~<i class="ai ai-google-scholar"></i>~~~ Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en)
-
 [~~~<i class="fab fa-discourse"></i>~~~ ITensor Discussion Forum](https://itensor.discourse.group)
 
 [~~~<i class="fab fa-discourse"></i>~~~ Julia Disussion Forum](https://discourse.julialang.org/u/mtfishman/summary)
 
+## Publications
+
+[~~~<i class="ai ai-google-scholar"></i>~~~ Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en)
+
+[~~~<i class="ai ai-orcid"></i>~~~ ORCID](https://orcid.org/0009-0008-5147-9169)
+
+[~~~<i class="ai ai-arxiv"></i>~~~ arXiv](https://arxiv.org/a/fishman_m_1.html)
