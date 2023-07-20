@@ -7,7 +7,7 @@ title = "Matthew Fishman"
 # Introduction
 
 Welcome! I'm Matt Fishman,
-[Associate Data Scientist at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman)
+[Research Scientist and Software Engineer at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman)
 at the Flatiron Institute in New York.
 I'm lead developer of
 [ITensor](https://itensor.org) (co-developed with [Miles Stoudenmire](https://itensor.org/miles)),
