@@ -78,19 +78,26 @@ tensor network software.
 
 [~~~<i class="fas fa-envelope"></i>~~~ Email](mailto:mfishman@flatironinstitute.org) -
 For general questions, feel free to email me directly.
-This is probably the best way to reach me.
 I receive a lot of email, if I don't respond it may have gotten buried in
 my inbox so please email me again to remind me to respond.
+If you have questions about how to use ITensor, it is better to ask
+on the [ITensor Discourse forum](https://itensor.discourse.group).
+If you have issues or feature request for a software that I develop,
+it is better to raise an issue in the appropriate Github repository.
 
 [~~~<i class="fab fa-github"></i>~~~ Github](https://github.com/mtfishman) - Here you can find most of my coding projects and activity. If there are problems or missing features on coding projects I work on, please raise an issue on the Github repository of the corresponding [project](/projects) or make a pull request if you have a fix (though it is best to check with me before starting a pull request, since my collaborators and I may already be working on the same issue or have a specific design in mind). If I don't respond, feel free to bug me with comments on Github or by email.
 
-[~~~<i class="fab fa-discourse"></i>~~~ ITensor Discussion Forum](https://itensor.discourse.group) - I answer questions about ITensor on our discussion forum. This is a good place to ask ITensor-specific questions, like how to use ITensor for your particular problem.
+[~~~<i class="fab fa-discourse"></i>~~~ ITensor Discussion Forum](https://itensor.discourse.group) - I answer questions about ITensor on our discussion forum. This is a good place to ask ITensor-specific questions, for example questions on how to use ITensor.
 
-[~~~<i class="fab fa-discourse"></i>~~~ Julia Discussion Forum](https://discourse.julialang.org/u/mtfishman/summary) - I occasionally ask and answer questions on Julia discourse, but look at it almost every day to keep up with developments in Julia. You can send me a private message on Julia Discourse as an alternative to emailing me. Additionally, you can ask questions about the Julia version of ITensor here and I will try to answer, please add the [ITensor tag ~~~<i class="fas fa-external-link-alt"></i>~~~](https://discourse.julialang.org/tag/itensor) to your post.
+[~~~<i class="fab fa-discourse"></i>~~~ Julia Discussion Forum](https://discourse.julialang.org/u/mtfishman/summary) - I occasionally ask and answer questions on Julia discourse, but look at it almost every day to keep up with developments in Julia.
 
-[~~~<i class="fas fa-building"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman) - This is my current work profile.
+[~~~<i class="fas fa-building"></i>~~~ Work Profile](https://www.simonsfoundation.org/people/matthew-fishman) - This is my current work profile for my job as a Research Scientist and Software Engineer (Research Scientist-Software) at the Center for Computational Quantum Physics, part of the Flatiron Institute, the internal research division of the Simons Foundation.
 
 [~~~<i class="ai ai-google-scholar"></i>~~~ Google Scholar](https://scholar.google.com/citations?user=SMjCBTsAAAAJ&hl=en) - Here you can find an up to date list of my publications.
+
+[~~~<i class="ai ai-orcid"></i>~~~ ORCID](https://orcid.org/0009-0008-5147-9169)
+
+[~~~<i class="ai ai-arxiv"></i>~~~ arXiv](https://arxiv.org/a/fishman_m_1.html)
 
 ### Recorded Talks
 

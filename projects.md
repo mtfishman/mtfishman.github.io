@@ -15,10 +15,10 @@ I am the lead developer of
 , a full port of the
 [C++ ITensor library ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensor)
 to the Julia language.
-It is a library co-develop with
+It is a library I co-develop with
 [Miles Stoudenmire ~~~<i class="fas fa-external-link-alt"></i>~~~](http://itensor.org/miles)
 for easily developing and running high performance tensor network
-calculations, with applications to quantum physics, quantum computing
+algorithms, with applications to quantum physics, quantum computing,
 chemistry, and data science/machine learning.
 
 [~~~<i class="fas fa-external-link-alt"></i>~~~ itensor.org](https://itensor.org)
@@ -32,7 +32,8 @@ ITensors.jl news
 
 ~~~<i class="fas fa-newspaper"></i>~~~
 __Automatic differentiation:__
-Derivatives of basic tensor network operations using automatic
+Derivatives of basic tensor network operations like tensor contraction and addition
+as well as many MPO/MPS operations like gate evolution using automatic
 differentiation are now supported.
 Reverse mode automatic differentiation (AD) primitives are defined using
 [ChainRulesCore.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/JuliaDiff/ChainRulesCore.jl)
@@ -150,19 +151,16 @@ temporary complex conjugated tensors.
 
 ---
 
-### ITensorVisualizationBase.jl
+### ITensorNetworks.jl
 
-[ITensorVisualizationBase.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/ITensorVisualizationBase)
-is an interface package for defining common functionality for different
-visualization backends for ITensors.jl.
-Currently, the main concrete backends are
-[ITensorGLMakie.jl](/projects/ITensorGLMakie.jl) and
-[ITensorUnicodePlots.jl](/projects/ITensorUnicodePlots.jl).
-You should load one of those to visualization tensor networks of ITensors
-(either as interactive plots or plots printing to the command line with
-unicode).
+[ITensorNetworks.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/mtfishman/ITensorNetworks.jl)
+This is the next-generation general tensor network library built on top of ITensors.jl.
+It will generalize the MPS solvers like DMRG, TDVP, and linear solving, as well as tools
+for gate evolution, that are available in ITensors.jl and
+[ITensorTDVP.jl](https://github.com/ITensor/ITensorTDVP.jl) to tree tensor
+networks (TTN) and even more general tensor networks. Stay tuned for more developments!
 
-[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorVisualizationBase)
+[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/mtfishman/ITensorNetworks.jl)
 
 ---
 
@@ -214,18 +212,6 @@ implicitly
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{stauber2017}
 
-### ITensorGPU.jl
-
-[ITensorGPU.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGPU) is a a GPU backend for ITensors.jl primarily written by [Katie Hyatt ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/kshyatt) while she was a postdoc at the CCQ.
-
-[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensors.jl/tree/main/ITensorGPU)
-
-### ITensorNetworkAD.jl
-
-[ITensorNetworkAD.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensorNetworkAD.jl) is an experimental tensor network automatic differentiation (AD) library based on [ITensors.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/ITensors.jl), started by [Linjian Ma ~~~<i class="fas fa-external-link-alt"></i>~~~](https://linjianma.github.io) while he was a summer intern at the CCQ. It makes use of [AutoHOOT ~~~<i class="fab fa-github"></i>~~~](https://github.com/LinjianMa/AutoHOOT), a Python library for symbolic derivatives and simplifications of tensor networks.
-
-[~~~<i class="fab fa-github"></i>~~~ Source code](https://github.com/ITensor/ITensorNetworkAD.jl)
-
 ### Other extensions to ITensors.jl
 
 Many packages are in development that extend the functionality of ITensors.jl, such as packages for performing network level contractions and gradient optimizations of tensor networks, packages for interfacing with quantum chemistry libraries like PySCF, and more. Stay tuned and keep an eye out on my [Github page ~~~<i class="fab fa-github"></i>~~~](https://github.com/mtfishman), the [ITensor Github organization ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor), and the [ITensor website ~~~<i class="fas fa-external-link-alt"></i>~~~](https://itensor.org)!
@@ -275,15 +261,29 @@ trying to learn about DMRG, Julia, and ITensors.jl.
 
 [SerializedElementArrays.jl ~~~<i class="fab fa-github"></i>~~~](https://github.com/ITensor/SerializedElementArrays.jl) is a package I wrote that provides a new Julia Array type (a SerializedElementArray) whose elements are saved to disk. This can help in cases where you have collections of large contiguous data (like an Array of very large Arrays) which individually fit in memory but collectively do not. This is used for the write-to-disk feature in ITensors.jl.
 
-## Tensor Network algorithm development
+## Tensor network algorithm development
 
-### Free Fermion Tensor Networks
+### Gauging tensor networks with belief propagation and applications to circuit simulation
+
+We recently developed a new method for gauging tensor networks based on belief propagation, and applied it to simulate the kicked transverse field Ising model on a heavy-hex lattice, a model that was recently emulated on IBM's Eagle quantum processor.
+
+~~~<i class="fas fa-file-alt"></i>~~~ \cite{tindall2023a}
+
+~~~<i class="fas fa-file-alt"></i>~~~ \cite{tindall2023b}
+
+### Gaussian circuits and impurity solvers
 
 [Steven White ~~~<i class="fas fa-external-link-alt"></i>~~~](https://faculty.sites.uci.edu/dmrg/) and I developed an algorithm for obtaining a compact quantum circuit of local gates for a free fermion state. This leads to a straightforward way to construct tensor network state like matrix product states (MPS), tree tensor networks (TTN), and multi-scale entanglement renormalization ansatz (MERA) for free fermion states.
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2015}
 
-### Variational Uniform Matrix Product States and Tree Tensor Networks
+We have recently applied this method to develop next-generation impurity solvers based on disentangling the non-interacting bath, as well as by representing the influence matrix of the non-interacting bath as a matrix product state (MPS).
+
+~~~<i class="fas fa-file-alt"></i>~~~ \cite{wu2022}
+
+~~~<i class="fas fa-file-alt"></i>~~~ \cite{kloss2023}
+
+### Variational uniform matrix product states and tree tensor networks
 
 In collaboration with colleagues at the University of Ghent and the University of Vienna, I helped to develop a new algorithm for finding ground states of quasi-1D quantum systems directly in the thermodynamic limit, which is faster at finding ground states than the state-of-the-art alternatives. The algorithm is called the variational uniform matrix product state (VUMPS) algorithm.
 
@@ -293,13 +293,13 @@ In collaboration with colleagues at the CCQ, I worked on extending the VUMPS alg
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{lunts2020}
 
-### Improved Contraction Methods for Infinite 2D Tensor Networks
+### Improved contraction methods for infinite 2D tensor networks
 
 In collaboration with colleagues at the University of Ghent and the University of Vienna, I worked on extending the VUMPS algorithm to the problem of contracting infinite 2D tensor networks and showed that in many cases it outperforms the standard method, the corner transfer matrix renormalization group (CTMRG) algorithm. In addition, I worked on a fixed point formulation of CTMRG which we also showed was faster than the original CTMRG algorithm, which we called the fixed point corner method (FPCM).
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \cite{fishman2017}
 
-### Easing the Sign Problem with Variational Circuits and Automatic Differentation
+### Easing the sign problem with variational circuits and automatic differentation
 
 With colleagues from CCQ and other institutions, I helped develop a method for decreasing the average sign of a wavefunction by optimizing a quantum circuit ansatz with automatic differentiation. This could have implications for improving the performance of monte carlo algorithms.
 
@@ -307,14 +307,22 @@ With colleagues from CCQ and other institutions, I helped develop a method for d
 
 ## References
 
-~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{fishman2015}{Fishman et al. (2015)} **Fishman, White** [Compression of Correlation Matrices and an Efficient Method for Forming Matrix Product States of Fermionic Gaussian States](https://arxiv.org/abs/1504.07701), 2015.
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{tindall2023b}{Tindall et al. (2023)} **Tindall, Fishman** [Gauging tensor networks with belief propagation](https://arxiv.org/abs/2306.17837), 2023.
 
-~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{stauber2017}{Zauner-Stauber et al. (2017)} **Zauner-Stauber, Vanderstraeten, Fishman, Verstraete, Haegeman** [Variational optimization algorithms for uniform matrix product states](https://arxiv.org/abs/1701.07035), 2017.
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{tindall2023a}{Tindall et al. (2023)} **Tindall, Fishman, Stoudenmire, Sels** [Efficient tensor network simulation of IBM's Eagle kicked Ising experiment](https://arxiv.org/abs/2306.14887), 2023.
 
-~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{fishman2017}{Fishman et al. (2017)} **Fishman, Vanderstraeten, Zauner-Stauber, Haegeman, Verstraete** [Faster Methods for Contracting Infinite 2D Tensor Networks](https://arxiv.org/abs/1711.05881), 2017.
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{kloss2023}{Kloss et al. (2023)} **Kloss, Thoenniss, Sonner, Lerose, Fishman, Stoudenmire, Parcollet, Georges, Abanin** [Equilibrium Quantum Impurity Problems via Matrix Product State Encoding of the Retarded Action](https://arxiv.org/abs/2306.17216), 2023.
+
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{wu2022}{Wu et al. (2022)} **Wu, Fishman, Pixley, Stoudenmire** [Disentangling Interacting Systems with Fermionic Gaussian Circuits: Application to the Single Impurity Anderson Model](https://arxiv.org/abs/2212.09798), 2022.
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{lunts2020}{Lunts et al. (2020)} **Lunts, George, Stoudenmire, Fishman** [The Hubbard model on the Bethe lattice via variational uniform tree states: metal-insulator transition and a Fermi liquid](https://arxiv.org/abs/2010.06543), 2020.
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{fishman2020}{Fishman et al. (2020)} **Fishman, White, Stoudenmire** [The ITensor Software Library for Tensor Network Calculations](https://arxiv.org/abs/2007.14822), 2020.
 
 ~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{torlai2019}{Torlai et al. (2019)} **Torlai, Carrasquilla, Fishman, Melko, Fisher** [Wavefunction positivization via automatic differentiation](https://arxiv.org/abs/1906.04654), 2019.
+
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{fishman2017}{Fishman et al. (2017)} **Fishman, Vanderstraeten, Zauner-Stauber, Haegeman, Verstraete** [Faster Methods for Contracting Infinite 2D Tensor Networks](https://arxiv.org/abs/1711.05881), 2017.
+
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{stauber2017}{Zauner-Stauber et al. (2017)} **Zauner-Stauber, Vanderstraeten, Fishman, Verstraete, Haegeman** [Variational optimization algorithms for uniform matrix product states](https://arxiv.org/abs/1701.07035), 2017.
+
+~~~<i class="fas fa-file-alt"></i>~~~ \biblabel{fishman2015}{Fishman et al. (2015)} **Fishman, White** [Compression of Correlation Matrices and an Efficient Method for Forming Matrix Product States of Fermionic Gaussian States](https://arxiv.org/abs/1504.07701), 2015.

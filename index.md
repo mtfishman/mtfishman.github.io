@@ -35,7 +35,7 @@ I'm also a big fan of the
 
 [~~~<i class="fab fa-github"></i>~~~ Github](https://github.com/mtfishman)
 
-[~~~<i class="fas fa-building"></i>~~~ CCQ Profile](https://www.simonsfoundation.org/people/matthew-fishman)
+[~~~<i class="fas fa-building"></i>~~~ Work Profile](https://www.simonsfoundation.org/people/matthew-fishman)
 
 [~~~<i class="fab fa-discourse"></i>~~~ ITensor Discussion Forum](https://itensor.discourse.group)
 
