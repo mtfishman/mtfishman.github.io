@@ -9,8 +9,7 @@ title = "Matthew Fishman"
 Welcome! I'm Matt Fishman,
 [Research Scientist and Software Engineer at the Center for Computational Quantum Physics (CCQ)](https://www.simonsfoundation.org/people/matthew-fishman)
 at the Flatiron Institute in New York.
-I'm lead developer of
-[ITensor](https://itensor.org) (co-developed with [Miles Stoudenmire](https://itensor.org/miles)),
+I'm a developer of [ITensor](https://itensor.org),
 a software library for easily developing and running efficient tensor
 network calculations.
 
@@ -24,14 +23,7 @@ I'm also a big fan of the
 [Julia programming language ~~~<i class="fas fa-external-link-alt"></i>~~~](https://julialang.org/)
 !
 
-## ~~~<i class="fas fa-newspaper"></i>~~~ News
-
-- There is a new tutorial and presentation on gate evolution and optimization with ITensor and PastaQ that you can find [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTutorials.jl/).
-- We now have an initial implementation of 1-site and 2-site TDVP based on the Julia version of ITensor which can be found [here ~~~<i class="fas fa-external-link-alt"></i>~~~](https://github.com/mtfishman/ITensorTDVP.jl/).
-
 ## Online Presence
-
-[~~~<i class="fas fa-envelope"></i>~~~ Email](mailto:mfishman@flatironinstitute.org)
 
 [~~~<i class="fab fa-github"></i>~~~ Github](https://github.com/mtfishman)
 
